@@ -1,0 +1,21 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height));
+  border-right: 1px solid rgba(128, 128, 128, 0.54);
+  position: relative;
+  transition: width 0.3s;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.switcher {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

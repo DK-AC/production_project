@@ -7,7 +7,6 @@ import {ThemeSwitcher} from 'shared/ui/themeSwitcher/ui/ThemeSwitcher'
 export const Navbar = () => {
   return (
     <div className={classNames(cls.navbar, {}, [])}>
-      <ThemeSwitcher/>
       <div className={cls.links}>
         <AppLink to={'/'}>Main</AppLink>
         <AppLink to={'/about'}>About</AppLink>
