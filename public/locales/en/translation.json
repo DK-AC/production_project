@@ -3,5 +3,6 @@
   "Main": "Main",
   "About": "About",
   "loading": "loading...",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "pageNotFound": "Page not found"
 }

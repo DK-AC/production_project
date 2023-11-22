@@ -7,7 +7,6 @@ export function AppRouter() {
   const { t } = useTranslation()
 
   return (
-
     <Suspense fallback={<div>{t('loading')}</div>}>
       <div className="page-wrapper">
         <Routes>
