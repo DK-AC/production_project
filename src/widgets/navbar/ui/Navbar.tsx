@@ -1,11 +1,11 @@
-import React from 'react';
-import { AppLink } from 'shared/ui/appLink/AppLink';
-import { classNames } from 'shared/lib/classNames';
-import { useTranslation } from 'react-i18next';
-import cls from './Navbar.module.scss';
+import React from 'react'
+import { AppLink } from 'shared/ui/appLink/AppLink'
+import { classNames } from 'shared/lib/classNames'
+import { useTranslation } from 'react-i18next'
+import cls from './Navbar.module.scss'
 
 export function Navbar() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div className={classNames(cls.navbar, {}, [])}>
@@ -14,5 +14,5 @@ export function Navbar() {
         <AppLink to="/about">{t('About')}</AppLink>
       </div>
     </div>
-  );
+  )
 }

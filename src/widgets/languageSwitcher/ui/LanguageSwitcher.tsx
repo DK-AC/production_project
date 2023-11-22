@@ -1,9 +1,9 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/button/Button';
-import { classNames } from 'shared/lib/classNames';
-import { Theme } from 'app/providers/themeProvider/lib/ThemeContext';
-import cls from './LanguageSwitcher.module.scss';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { Button } from 'shared/ui/button/Button'
+import { classNames } from 'shared/lib/classNames'
+import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
+import cls from './LanguageSwitcher.module.scss'
 
 type LangSwitcherProps = {
   className?: string;
@@ -15,12 +15,12 @@ export enum Lang {
 }
 
 export function LanguageSwitcher({ className }: LangSwitcherProps) {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const toggleLanguage = async () => {
-    const newLang = i18n.language === Lang.RU ? Lang.EN : Lang.RU;
-    i18n.changeLanguage(newLang);
-  };
+    const newLang = i18n.language === Lang.RU ? Lang.EN : Lang.RU
+    i18n.changeLanguage(newLang)
+  }
 
   return (
     <Button
@@ -30,5 +30,5 @@ export function LanguageSwitcher({ className }: LangSwitcherProps) {
     >
       {t('Language')}
     </Button>
-  );
+  )
 }

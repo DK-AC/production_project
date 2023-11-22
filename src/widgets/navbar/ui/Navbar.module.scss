@@ -4,15 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.54);
+  border-bottom: 1px solid rgb(128 128 128 / 54%);
   padding: 0 20px;
   font-size: 18px;
   font-weight: bold;
 }
 
-.links{
-display: flex;
+.links {
+  display: flex;
   gap: 20px;
 }
-
-

@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes, FC } from 'react';
-import { classNames } from 'shared/lib/classNames';
-import { Theme } from 'app/providers/themeProvider/lib/ThemeContext';
-import cls from './Button.module.scss';
+import { ButtonHTMLAttributes, FC } from 'react'
+import { classNames } from 'shared/lib/classNames'
+import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
+import cls from './Button.module.scss'
 
 type ButtonProps = {
   theme?: Theme
@@ -11,7 +11,7 @@ type ButtonProps = {
 export const Button: FC<ButtonProps> = (props) => {
   const {
     children, className, theme, ...otherProps
-  } = props;
+  } = props
 
   return (
     <button
@@ -21,5 +21,5 @@ export const Button: FC<ButtonProps> = (props) => {
     >
       {children}
     </button>
-  );
-};
+  )
+}
