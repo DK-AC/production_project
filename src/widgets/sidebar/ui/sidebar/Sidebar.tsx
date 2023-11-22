@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import { ThemeSwitcher } from 'widgets/themeSwitcher'
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { LanguageSwitcher } from 'widgets/languageSwitcher/ui/LanguageSwitcher'
 import { Button } from 'shared/ui/button/Button'
 import { useTranslation } from 'react-i18next'

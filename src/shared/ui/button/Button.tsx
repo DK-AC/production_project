@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, FC } from 'react'
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
 import cls from './Button.module.scss'
 
