@@ -4,5 +4,7 @@
   "About": "About",
   "loading": "loading...",
   "toggle": "toggle",
-  "pageNotFound": "Page not found"
+  "pageNotFound": "Page not found",
+  "unforeseen error": "There was an unforeseen error",
+  "reload page": "Reload page"
 }
