@@ -1,6 +1,6 @@
-import {MainPage} from 'pages/main'
-import {AboutPage} from 'pages/about'
-import {ReactNode} from 'react'
+import { MainPage } from 'pages/main';
+import { AboutPage } from 'pages/about';
+import { ReactNode } from 'react';
 
 export enum AppRoutes {
   MAIN = '/',
@@ -13,7 +13,7 @@ type RouteConfigType = {
 }
 
 export const routeConfig: RouteConfigType[] = [
-  {path: AppRoutes.MAIN, element: <MainPage/>},
-  {path: AppRoutes.ABOUT, element: <AboutPage/>},
+  { path: AppRoutes.MAIN, element: <MainPage /> },
+  { path: AppRoutes.ABOUT, element: <AboutPage /> },
 
-]
+];
