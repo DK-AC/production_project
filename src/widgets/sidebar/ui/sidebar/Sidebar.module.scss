@@ -4,6 +4,8 @@
   border-right: 1px solid rgb(128 128 128 / 54%);
   position: relative;
   transition: width 0.3s;
+  background: var(--bg-color);
+  color: var(--inverted-bg-color);
 }
 
 .collapsed {
