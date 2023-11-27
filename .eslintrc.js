@@ -39,7 +39,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['to'],
+      ignoreAttribute: ['to', 'data-testid'],
     }],
     semi: [2, 'never'],
     'max-len': ['error', {
@@ -50,4 +50,12 @@ module.exports = {
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 }

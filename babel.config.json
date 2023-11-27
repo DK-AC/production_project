@@ -1,14 +1,15 @@
 {
   "presets": [
     "@babel/preset-env",
-    "@babel/preset-typescript"
-  ],
-  "plugins": [
+    "@babel/preset-typescript",
     [
-      "i18next-extract",
+      "@babel/preset-react",
       {
-        "nsSeparator": "~"
+        "runtime": "automatic"
       }
     ]
+  ],
+  "plugins": [
+    "i18next-extract"
   ]
-}
+} 
