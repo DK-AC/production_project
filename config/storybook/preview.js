@@ -1,4 +1,5 @@
 import { addDecorator } from '@storybook/react'
+import { RouterDecorator } from '../../src/shared/config/storybook/routerDecorator/RouterDecorator'
 import { Theme } from '../../src/app/providers/themeProvider/lib/ThemeContext'
 import { ThemeDecorator } from '../../src/shared/config/storybook/themeDecorator/themeDecorator'
 import { StyleDecorator } from '../../src/shared/config/storybook/styleDecorator/styleDecorator'
@@ -15,3 +16,4 @@ export const parameters = {
 
 addDecorator(StyleDecorator)
 addDecorator(ThemeDecorator(Theme.DARK))
+addDecorator(RouterDecorator)
