@@ -6,7 +6,8 @@ import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
 import cls from './LanguageSwitcher.module.scss'
 
 type LangSwitcherProps = {
-  className?: string;
+  className?: string
+  short: boolean
 }
 
 export enum Lang {
@@ -14,8 +15,10 @@ export enum Lang {
   RU = 'ru',
 }
 
-export function LanguageSwitcher({ className }: LangSwitcherProps) {
+export function LanguageSwitcher({ className, short }: LangSwitcherProps) {
   const { t, i18n } = useTranslation()
+
+  const mods = { [cls.languageSwitcherCollapsed]: short }
 
   const toggleLanguage = async () => {
     const newLang = i18n.language === Lang.RU ? Lang.EN : Lang.RU
@@ -24,11 +27,11 @@ export function LanguageSwitcher({ className }: LangSwitcherProps) {
 
   return (
     <Button
-      className={classNames(cls.languageSwitcher, {}, [className])}
+      className={classNames(cls.languageSwitcher, mods, [className])}
       onClick={toggleLanguage}
       theme={Theme.CLEAR}
     >
-      {t('Language')}
+      {t(short ? i18n.t('shortLang') : 'Language')}
     </Button>
   )
 }

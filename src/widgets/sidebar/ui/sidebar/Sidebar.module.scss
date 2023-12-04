@@ -6,17 +6,28 @@
   transition: width 0.3s;
   background: var(--bg-color);
   color: var(--inverted-bg-color);
-}
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
-}
+  &.collapsed {
+    width: var(--sidebar-width-collapsed);
+  }
 
-.switcher {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .switcher {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.switcherCollapsed {
+      flex-direction: column;
+    }
+  }
+
+  .toggleBtn {
+    position: absolute;
+    right: -41px;
+    bottom: 25px;
+    border: 1px solid rgb(128 128 128 / 54%);
+  }
 }

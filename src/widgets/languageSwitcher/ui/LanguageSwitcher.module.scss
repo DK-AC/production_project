@@ -1,3 +1,7 @@
 .languageSwitcher {
   margin-left: 10px;
+
+  &.languageSwitcherCollapsed {
+    margin: 0;
+  }
 }
