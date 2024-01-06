@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Button, ButtonTheme } from 'shared/ui/button/Button'
 
 // Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
@@ -15,11 +16,12 @@ export const BugButton = () => {
   }, [error])
 
   return (
-    <button
+    <Button
+      theme={ButtonTheme.OUTLINE}
       type="button"
       onClick={onThrow}
     >
       {t('throw error')}
-    </button>
+    </Button>
   )
 }

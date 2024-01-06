@@ -2,6 +2,7 @@
   cursor: pointer;
   color: var(--primary-color);
   padding: 6px 15px;
+  background: transparent;
 }
 
 .clear {
@@ -24,8 +25,8 @@
 }
 
 .backgroundInverted {
-  background: var(--inverted-bg-color);
-  color: var(--inverted-primary-color);
+  background: var(--bg-color);
+  color: var(--primary-color);
   border: none;
 }
 

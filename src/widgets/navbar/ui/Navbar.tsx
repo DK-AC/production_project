@@ -9,10 +9,7 @@ export function Navbar() {
 
   return (
     <div className={classNames(cls.navbar, {}, [])}>
-      <div className={cls.links}>
-        <AppLink to="/">{t('Main')}</AppLink>
-        <AppLink to="/about">{t('About')}</AppLink>
-      </div>
+      <div className={cls.links} />
     </div>
   )
 }

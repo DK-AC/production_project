@@ -3,20 +3,20 @@ import { AboutPage } from 'pages/about'
 import { NotFoundPage } from 'pages/notFound'
 import { ReactNode } from 'react'
 
-export enum AppRoutes {
+export enum RoutePath {
   MAIN = '/',
   ABOUT = '/about',
   NOT_FOUND = '*'
 }
 
 type RouteConfigType = {
-  path: AppRoutes
+  path: RoutePath
   element: ReactNode
 }
 
 export const routeConfig: RouteConfigType[] = [
-  { path: AppRoutes.MAIN, element: <MainPage /> },
-  { path: AppRoutes.ABOUT, element: <AboutPage /> },
-  { path: AppRoutes.NOT_FOUND, element: <NotFoundPage /> },
+  { path: RoutePath.MAIN, element: <MainPage /> },
+  { path: RoutePath.ABOUT, element: <AboutPage /> },
+  { path: RoutePath.NOT_FOUND, element: <NotFoundPage /> },
 
 ]
