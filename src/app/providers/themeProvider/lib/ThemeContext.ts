@@ -4,7 +4,8 @@ export enum Theme {
   DARK = 'dark',
   LIGHT = 'light',
   CLEAR = 'clear',
-  OUTLINE='outline'
+  OUTLINE = 'outline',
+  BACKGROUND_INVERTED = 'backgroundInverted'
 }
 
 export type ThemeContextProps = {

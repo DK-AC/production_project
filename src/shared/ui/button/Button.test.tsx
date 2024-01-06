@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react'
-import { Button } from './Button'
-import { Theme } from '../../../app/providers/themeProvider/lib/ThemeContext'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 describe('Button', () => {
-  test('Button is render', () => {
-    render(<Button>Test</Button>)
-    expect(screen.getByText('Test')).toBeInTheDocument()
+  test('Test render', () => {
+    render(<Button>TEST</Button>)
+    expect(screen.getByText('TEST')).toBeInTheDocument()
   })
 
-  test('Button with className', () => {
-    render(<Button theme={Theme.CLEAR}>Test</Button>)
-    expect(screen.getByText('Test')).toHaveClass('clear')
+  test('Test clear theme', () => {
+    render(<Button theme={ButtonTheme.CLEAR}>TEST</Button>)
+    expect(screen.getByText('TEST')).toHaveClass('clear')
+    screen.debug()
   })
 })

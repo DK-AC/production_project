@@ -26,8 +26,20 @@
 
   .toggleBtn {
     position: absolute;
-    right: -41px;
+    right: -34px;
     bottom: 25px;
     border: 1px solid rgb(128 128 128 / 54%);
   }
+}
+
+.background {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+.backgroundInverted {
+  background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+  border: none;
 }

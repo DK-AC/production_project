@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button } from 'shared/ui/button/Button'
+import { Button, ButtonTheme } from 'shared/ui/button/Button'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
 import cls from './LanguageSwitcher.module.scss'
@@ -29,7 +29,7 @@ export function LanguageSwitcher({ className, short }: LangSwitcherProps) {
     <Button
       className={classNames(cls.languageSwitcher, mods, [className])}
       onClick={toggleLanguage}
-      theme={Theme.CLEAR}
+      theme={ButtonTheme.CLEAR}
     >
       {t(short ? i18n.t('shortLang') : 'Language')}
     </Button>
