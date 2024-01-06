@@ -25,16 +25,16 @@ jobs:
         run: npm install
 
       - name: Run linting
-        if: always()
         run: npm run lint:ts
+        if: always()
 
       - name: Run unit tests
-        if: always()
         run: npm run test:unit
+        if: always()
 
       - name: Build project
-        if: always()
         run: npm run build:prod
+        if: always()
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
