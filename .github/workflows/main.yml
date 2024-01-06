@@ -25,12 +25,15 @@ jobs:
         run: npm install
 
       - name: Run linting
+        if: always()
         run: npm run lint:ts
 
       - name: Run unit tests
+        if: always()
         run: npm run test:unit
 
       - name: Build project
+        if: always()
         run: npm run build:prod
 
       - name: Archive artifacts
