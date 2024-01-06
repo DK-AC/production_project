@@ -36,7 +36,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         square
         size={ButtonSize.L}
       >
-        {t(collapsed ? '>' : '<')}
+        {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
         <AppLink className={cls.item} to={RoutePath.MAIN}>
