@@ -7,6 +7,12 @@
   z-index: -1;
   opacity: 0;
   pointer-events: none;
+  color: var(--primary-color);
+}
+
+.modal.dark {
+  --bg-color: black;
+  --primary-color: white;
 }
 
 .overlay {
@@ -21,8 +27,8 @@
 .content {
   padding: 20px;
   border-radius: 12px;
-  background-color: var(--inverted-bg-color);
   color: var(--bg-color);
+  background: var(--primary-color);
   opacity: 1;
   transition: 0.3s transform;
   transform: scale(0.5);
