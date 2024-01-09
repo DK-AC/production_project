@@ -8,5 +8,7 @@
   "unforeseen error": "Произошла непредвиденная ошибка",
   "reload page": "Перезагрузить страницу",
   "shortLang": "Ру",
-  "login": "Войти"
+  "login": "Войти",
+  "decrement": "уменьшить",
+  "increment": "прибавить"
 }
