@@ -52,6 +52,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'no-param-reassign': 'off',
+    'react/jsx-no-useless-fragment': 'off',
   },
   globals: {
     __IS_DEV__: true,
