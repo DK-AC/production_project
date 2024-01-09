@@ -7,7 +7,6 @@ function Main() {
 
   return (
     <div>
-      <Counter />
       {t('Main page')}
     </div>
   )
