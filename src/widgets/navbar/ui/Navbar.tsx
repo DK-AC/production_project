@@ -1,18 +1,18 @@
-import React, { useCallback, useState } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { useTranslation } from 'react-i18next'
-import { Modal } from 'shared/ui/modal/ui/Modal'
-import { Button, ButtonTheme } from 'shared/ui/button/Button'
-import cls from './Navbar.module.scss'
+import React, { useCallback, useState } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
+import { Modal } from 'shared/ui/modal/ui/Modal';
+import { Button, ButtonTheme } from 'shared/ui/button/Button';
+import cls from './Navbar.module.scss';
 
 export function Navbar() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
-  const [isAuthModal, setIsAuthModal] = useState(false)
+  const [isAuthModal, setIsAuthModal] = useState(false);
 
   const onToggleModal = useCallback(() => {
-    setIsAuthModal((prevState) => !prevState)
-  }, [])
+    setIsAuthModal((prevState) => !prevState);
+  }, []);
 
   return (
     <div className={classNames(cls.navbar, {}, [])}>
@@ -26,5 +26,5 @@ export function Navbar() {
         rerum sequi velit.
       </Modal>
     </div>
-  )
+  );
 }

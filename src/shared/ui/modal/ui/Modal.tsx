@@ -1,10 +1,10 @@
 import React, {
   ReactNode, useCallback, useEffect, useRef, useState,
-} from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Portal } from 'shared/ui/portal/Portal'
-import { useTheme } from 'app/providers/themeProvider'
-import cls from './Modal.module.scss'
+} from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Portal } from 'shared/ui/portal/Portal';
+import { useTheme } from 'app/providers/themeProvider';
+import cls from './Modal.module.scss';
 
 type Props = {
   className?: string
@@ -13,7 +13,7 @@ type Props = {
   onClose?: () => void
 }
 
-const ANIMATION_DELAY = 300
+const ANIMATION_DELAY = 300;
 
 export const Modal = (props: Props) => {
   const {
@@ -21,47 +21,47 @@ export const Modal = (props: Props) => {
     children,
     className,
     onClose,
-  } = props
+  } = props;
 
-  const [isClosing, setIsClosing] = useState(false)
-  const timeRef = useRef<ReturnType<typeof setTimeout>>()
-  const { theme } = useTheme()
+  const [isClosing, setIsClosing] = useState(false);
+  const timeRef = useRef<ReturnType<typeof setTimeout>>();
+  const { theme } = useTheme();
 
   const closeHandle = useCallback(() => {
     if (onClose) {
-      setIsClosing(true)
+      setIsClosing(true);
       timeRef.current = setTimeout(() => {
-        onClose()
-        setIsClosing(false)
-      }, ANIMATION_DELAY)
+        onClose();
+        setIsClosing(false);
+      }, ANIMATION_DELAY);
     }
-  }, [onClose])
+  }, [onClose]);
 
   const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation()
-  }
+    e.stopPropagation();
+  };
 
   const onKeyDownHandle = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') {
-      closeHandle()
+      closeHandle();
     }
-  }, [closeHandle])
+  }, [closeHandle]);
 
   useEffect(() => {
     if (isOpen) {
-      window.addEventListener('keydown', onKeyDownHandle)
+      window.addEventListener('keydown', onKeyDownHandle);
     }
 
     return () => {
-      clearTimeout(timeRef.current)
-      window.removeEventListener('keydown', onKeyDownHandle)
-    }
-  }, [isOpen, onKeyDownHandle])
+      clearTimeout(timeRef.current);
+      window.removeEventListener('keydown', onKeyDownHandle);
+    };
+  }, [isOpen, onKeyDownHandle]);
 
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
-  }
+  };
 
   return (
     <Portal>
@@ -79,5 +79,5 @@ export const Modal = (props: Props) => {
         </div>
       </div>
     </Portal>
-  )
-}
+  );
+};

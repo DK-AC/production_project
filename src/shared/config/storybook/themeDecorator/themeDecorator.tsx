@@ -1,6 +1,6 @@
-import { Story } from '@storybook/react'
-import { ThemeProvider } from 'app/providers/themeProvider'
-import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
+import { Story } from '@storybook/react';
+import { ThemeProvider } from 'app/providers/themeProvider';
+import { Theme } from 'app/providers/themeProvider/lib/ThemeContext';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => (
   <ThemeProvider initialTheme={theme}>
@@ -8,4 +8,4 @@ export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => (
       <StoryComponent />
     </div>
   </ThemeProvider>
-)
+);

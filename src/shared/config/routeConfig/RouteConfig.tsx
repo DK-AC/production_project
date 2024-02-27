@@ -1,7 +1,7 @@
-import { MainPage } from 'pages/main'
-import { AboutPage } from 'pages/about'
-import { NotFoundPage } from 'pages/notFound'
-import { ReactNode } from 'react'
+import { MainPage } from 'pages/main';
+import { AboutPage } from 'pages/about';
+import { NotFoundPage } from 'pages/notFound';
+import { ReactNode } from 'react';
 
 export enum RoutePath {
   MAIN = '/',
@@ -19,4 +19,4 @@ export const routeConfig: RouteConfigType[] = [
   { path: RoutePath.ABOUT, element: <AboutPage /> },
   { path: RoutePath.NOT_FOUND, element: <NotFoundPage /> },
 
-]
+];

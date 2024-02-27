@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import { createPortal } from 'react-dom'
+import { ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 type Props = {
   children: ReactNode
@@ -10,7 +10,7 @@ export const Portal = (props: Props) => {
   const {
     element = document.body,
     children,
-  } = props
+  } = props;
 
-  return createPortal(children, element)
-}
+  return createPortal(children, element);
+};

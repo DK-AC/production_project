@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'path';
 
 export default {
   globals: {
@@ -197,4 +197,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-}
+};

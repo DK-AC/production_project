@@ -1,8 +1,8 @@
-import React, { Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { routeConfig } from 'shared/config/routeConfig/RouteConfig'
-import { PageLoader } from 'widgets/pageLoader'
-import { BugButton } from 'app/providers/errorBoundary'
+import React, { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { routeConfig } from 'shared/config/routeConfig/RouteConfig';
+import { PageLoader } from 'widgets/pageLoader';
+import { BugButton } from 'app/providers/errorBoundary';
 
 export function AppRouter() {
   return (
@@ -23,5 +23,5 @@ export function AppRouter() {
       </Routes>
 
     </div>
-  )
+  );
 }

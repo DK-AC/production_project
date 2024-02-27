@@ -4,11 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'plugin:i18next/recommended',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -17,17 +13,15 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'i18next',
-    'react-hooks',
-  ],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'import/prefer-default-export': 'off',
-    'react/jsx-filename-extension': [2, {
-      extensions: ['.ts', '.js', '.jsx', '.tsx'],
-    }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.ts', '.js', '.jsx', '.tsx'],
+      },
+    ],
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -38,15 +32,21 @@ module.exports = {
     'react/require-default-props': 'off',
     'no-underscore-dangle': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'i18next/no-literal-string': ['error', {
-      markupOnly: true,
-      ignoreAttribute: ['to', 'data-testid'],
-    }],
-    semi: [2, 'never'],
-    'max-len': ['error', {
-      code: 100,
-      ignoreComments: true,
-    }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['to', 'data-testid'],
+      },
+    ],
+    semi: [1, 'always'],
+    'max-len': [
+      'error',
+      {
+        code: 100,
+        ignoreComments: true,
+      },
+    ],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/rules-of-hooks': 'error',
@@ -66,4 +66,4 @@ module.exports = {
       },
     },
   ],
-}
+};

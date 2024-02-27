@@ -1,19 +1,19 @@
-import webpack from 'webpack'
-import { BuildOptions } from './types/config'
-import { buildCssLoader } from './loaders/buildCssLoader'
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
+import { buildCssLoader } from './loaders/buildCssLoader';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
-  }
+  };
 
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
-  }
+  };
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif)$/i,
@@ -22,7 +22,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         loader: 'file-loader',
       },
     ],
-  }
+  };
 
   const babelLoader = {
     test: /\.(js|jsx|tsx|ts)$/,
@@ -42,8 +42,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         ],
       },
     },
-  }
-  const cssLoader = buildCssLoader(isDev)
+  };
+  const cssLoader = buildCssLoader(isDev);
 
-  return [svgLoader, fileLoader, cssLoader, babelLoader, typescriptLoader]
+  return [svgLoader, fileLoader, cssLoader, babelLoader, typescriptLoader];
 }

@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import React from 'react'
-import { Theme } from 'app/providers/themeProvider/lib/ThemeContext'
-import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
-import { PageError } from './PageError'
+import React from 'react';
+import { Theme } from 'app/providers/themeProvider/lib/ThemeContext';
+import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator';
+import { PageError } from './PageError';
 
 export default {
   title: 'widget/PageError',
@@ -12,14 +12,14 @@ export default {
     backgroundColor: { control: 'color' },
   },
 
-} as ComponentMeta<typeof PageError>
+} as ComponentMeta<typeof PageError>;
 
-const Template: ComponentStory<typeof PageError> = (args) => <PageError {...args} />
+const Template: ComponentStory<typeof PageError> = (args) => <PageError {...args} />;
 
-export const LIGHT = Template.bind({})
-LIGHT.args = {}
-LIGHT.decorators = [ThemeDecorator(Theme.LIGHT)]
+export const LIGHT = Template.bind({});
+LIGHT.args = {};
+LIGHT.decorators = [ThemeDecorator(Theme.LIGHT)];
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
